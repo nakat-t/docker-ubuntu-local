@@ -1,2 +1,3 @@
 # docker-ubuntu-local
-Ubuntu Docker image for local development
+
+Ubuntu Docker image for my local development.
