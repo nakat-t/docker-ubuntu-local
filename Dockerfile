@@ -1,10 +1,12 @@
 FROM ubuntu:18.04
 LABEL maintainer="nakat-t <armaiti.wizard@gmail.com>"
 
+# DEBIAN_FRONTEND=noninteractive required for install tzdata and git
+# https://qiita.com/yagince/items/deba267f789604643bab
 # https://serverfault.com/questions/949991/how-to-install-tzdata-on-a-ubuntu-docker-image
-ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && \
+	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 		build-essential \
 		curl \
 		gcc-multilib \
