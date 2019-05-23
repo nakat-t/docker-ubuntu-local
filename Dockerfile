@@ -36,6 +36,7 @@ RUN apt-get update && \
 		python \
 		python-svn \
 		ruby \
+		valgrind \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
